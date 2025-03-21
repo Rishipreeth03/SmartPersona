@@ -15,8 +15,9 @@ function signIn() {
             localStorage.setItem('user_token',tokenResponse.access_token);
           }
           const user=GetAuthUserData(tokenResponse.access_token);
-          
           console.log(user);
+          //save user info 
+          
         },
         onError: errorResponse => console.log(errorResponse),
       });
