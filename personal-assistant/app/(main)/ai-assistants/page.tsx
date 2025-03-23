@@ -1,14 +1,15 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import AiAssistantsList from '@/services/AiAssistantsList'
-import React, { use, useContext, useState } from 'react'
+import React, { use, useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 import { Checkbox } from '@/components/ui/checkbox'
 import { BlurFade } from '@/components/magicui/blur-fade'
 import { ShinyButton } from '@/components/magicui/shiny-button'
 import { RainbowButton } from '@/components/magicui/rainbow-button'
 import { PulsatingButton } from '@/components/magicui/pulsating-button'
-import { useMutation } from 'convex/react'
+import { useConvex, useMutation } from 'convex/react'
 import { api } from '@/convex/_generated/api'
 import { AuthContext } from '@/context/AuthContext'
 import { Loader2Icon } from 'lucide-react'
@@ -29,6 +30,24 @@ function AIAssistants() {
     const insertAssistant = useMutation(api.userAiAssistants.InsertSelectedAssistants);
     const { user } = useContext(AuthContext);
     const [loading, setLoading] = useState(false);
+    const convex=useConvex();
+    const router=useRouter();
+
+    useEffect(()=>{
+        user&&GetUserAssistants();
+    },[user])
+
+    const GetUserAssistants = async () => {
+        const result = await convex.query(api.userAiAssistants.GetAllUserAssistants, {
+            uid: user._id
+        });
+        console.log(result);
+        if(result.length>0){
+            //Naviagte to new screen
+            router.replace('/workspace')
+            return;
+        }
+    }
     const onSelect = (ai: ASSISTANT) => {
         const item = selectedAssistant.find((item) => item.id === ai.id);
         if (item) {

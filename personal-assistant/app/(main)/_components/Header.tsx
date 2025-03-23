@@ -6,7 +6,7 @@ import { AuthContext } from '@/context/AuthContext'
 function header() {
     const { user } = useContext(AuthContext);
     return (
-        <div className='p-3 shadow-sm flex justify-between items-center px-14'>
+        <div className='p-3 fixed shadow-sm flex justify-between items-center px-14'>
             <Image src={'/logo.svg'} alt='logo'
                 width={40}
                 height={40}
