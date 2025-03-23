@@ -1,5 +1,8 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import Provider from './provider';
+import { GetAuthUserData } from '@/services/GlobalApi';
+import { useRouter } from 'next/navigation';
 
 function WorkspaceLayout({
     children,
@@ -7,7 +10,11 @@ function WorkspaceLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div><Provider>{children}</Provider></div>
+        <html lang="en" suppressHydrationWarning={true}>
+            <body>
+                <div><Provider>{children}</Provider></div>
+            </body>
+        </html>
     )
 }
 
