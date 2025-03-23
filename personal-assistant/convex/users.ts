@@ -1,11 +1,11 @@
 import { v } from "convex/values";
 import { mutation } from "./_generated/server";
 
-export const CreateUser=mutation({
-    args:{
-        name:v.string(),
-        email:v.string(),
-        picture:v.string()
+export const CreateUser = mutation({
+    args: {
+        name: v.string(),
+        email: v.string(),
+        picture: v.string()
     },
     handler: async (ctx, args) => {
         //If user already exist in table
@@ -15,14 +15,16 @@ export const CreateUser=mutation({
 
         if (users.length === 0) {
             //if not then only -> add user
-            const data={
-                name:args.name,
-                email:args.email,
-                picture:args.picture,
-                credits:5000
+            const data = {
+                name: args.name,
+                email: args.email,
+                picture: args.picture,
+                credits: 5000
             }
-            const result=await ctx.db.insert('user',data);
-            return users[0];
+            const result = await ctx.db.insert('user', data);
+            return data;
         }
+
+        return users[0]
     }
 })
