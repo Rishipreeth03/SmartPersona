@@ -10,11 +10,9 @@ function WorkspaceLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning={true}>
-            <body>
-                <div><Provider>{children}</Provider></div>
-            </body>
-        </html>
+
+        <div><Provider>{children}</Provider></div>
+
     )
 }
 
