@@ -82,7 +82,7 @@ function AssistantSettings() {
             </SelectTrigger>
             <SelectContent>
               {AiModelOptions.map((model, index) => (
-                <SelectItem value={model.name}>
+                <SelectItem key={index} value={model.name}>
                   <div key={index} className='flex gap-3 items-center'>
                     <Image src={model?.logo} alt={model.name}
                       width={20}
