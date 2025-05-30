@@ -1,42 +1,110 @@
-# Personal Assistant
+# AI Assistant Platform
 
-🚀 A powerful and customizable personal assistant built with Next.js, designed to enhance productivity and streamline tasks.
+This is a **Next.js** project bootstrapped with `create-next-app`.
 
-## 🛠️ Installation
+## 🚀 Getting Started
 
-To get started with **Personal Assistant**, follow these steps:
+First, set up the environment variables and Convex backend, then run the development server.
 
-### 1️⃣ Clone the Repository
-```sh
+---
+
+## 📋 Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js**: Version 18 or higher  
+- **Package Manager**: `npm`, `yarn`, `pnpm`, or `bun`  
+- **Convex CLI**: For managing the Convex backend  
+- **Eden AI Account**: To obtain an API key  
+- **Google Cloud Console**: For OAuth client ID
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository:**
+
+```bash
 git clone https://github.com/Rishipreeth03/SmartPersona.git
 cd personal-assistant
 ```
 
-### 2️⃣ Install Dependencies
-```sh
+--- 
+
+## 📦 Install Dependencies
+
+```bash
+# Choose one
 npm install
-# or
 yarn install
-# or
 pnpm install
+bun install
+
 ```
 
-### 3️⃣ Create a `.env` File
-Create a `.env` file in the root directory and add your **Google OAuth Client ID**:
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root of the project with the following variables:
+
 ```env
-NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-client-id-here
-```
-Make sure to replace `your-google-client-id-here` with your actual **Google Client ID**.
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-client-id
+EDEN_AI_API_KEY=your-eden-ai-api-key
+CONVEX_DEPLOYMENT=your-convex-deployment
+NEXT_PUBLIC_CONVEX_URL=your-convex-url
 
-### 4️⃣ Run the Development Server
-```sh
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
 ```
-The application will be available at **`http://localhost:3000`**.
+## 🏃 Running the Application
+
+### 1. Start the Convex development server:
+
+```bash
+npx convex dev
+
+```
+## start the development server:
+
+```bash
+# Choose one
+npm run dev
+yarn dev
+pnpm dev
+bun dev
+
+```
+
+--- Visit http://localhost:3000 to see the application.
+
+# 🛠 Tech Stack
+
+### Next.js – React framework for SSR and SSG
+
+### Eden AI – Unified API for AI capabilities
+
+### ConvexDB – Real-time serverless database
+
+### TypeScript – Type-safe JavaScript development
+
+### Other tools – Libraries for UI, state management, and auth
+
+---
+## 📸 Demo Screenshots
+
+Here are some key screens of the application:
+
+### 🧠 AI Assistants Overview  
+![AI Assistants](public\Adding_assistant.png)
+
+
+### 🧩 Assistant Resolution  
+![Assistant Resolution](public\Assistant_resolve.png)
+
+### ➕ Adding a New Assistant  
+![Adding Assistant](public\Adding_assistant.png)
+
+### 🔐 Authorization Page  
+![Authorization](public\Authorisation.png)
+
 
 ---
 
@@ -45,13 +113,10 @@ The application will be available at **`http://localhost:3000`**.
 👉 Voice-controlled commands  
 👉 Secure authentication  
 👉 Personalized user experience  
+👉 Payment GateWay System
 
 ---
 
-## 🌜 License
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 🤝 Contributing
 Feel free to submit issues or pull requests to improve the project! 🙌  
@@ -59,4 +124,4 @@ Feel free to submit issues or pull requests to improve the project! 🙌
 ---
 
 ## 📩 Contact
-For any inquiries, reach out via [chrishipreeth07@gmail.com](mailto:chrishipreeth07@gmail.com).
+For any inquiries, reach out via [mail](mailto:chrishipreeth07@gmail.com).
