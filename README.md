@@ -93,17 +93,17 @@ bun dev
 Here are some key screens of the application:
 
 ### 🧠 AI Assistants Overview  
-![AI Assistants](public\Adding_assistant.png)
+![AI Assistants](./personal-assistant/public/Adding_assistant.png)
 
 
 ### 🧩 Assistant Resolution  
-![Assistant Resolution](public\Assistant_resolve.png)
+![Assistant Resolution](./personal-assistant/public/Assistant_resolve.png)
 
 ### ➕ Adding a New Assistant  
-![Adding Assistant](public\Adding_assistant.png)
+![Adding Assistant](./personal-assistant/public/Adding_assistant.png)
 
 ### 🔐 Authorization Page  
-![Authorization](public\Authorisation.png)
+![Authorization](./personal-assistant/public/Authorisation.png)
 
 
 ---
